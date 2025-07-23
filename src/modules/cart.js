@@ -40,6 +40,11 @@ function updateCartUI() {
     container.appendChild(div);
   });
 
+  document.getElementById("cart-count").textContent = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
   const totalDiv = document.createElement("div");
   totalDiv.textContent = `Total: $${total.toFixed(2)}`;
   container.appendChild(totalDiv);

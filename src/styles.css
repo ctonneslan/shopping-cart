@@ -125,3 +125,26 @@ h1, h2 {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.cart-summary {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #111;
+}
