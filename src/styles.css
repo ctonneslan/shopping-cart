@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #111;
+  color: white;
+}
+
+.product {
+  border: 1px solid #444;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
