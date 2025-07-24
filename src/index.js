@@ -1,6 +1,7 @@
 import "./styles.css";
 import { renderProductList } from "./modules/dom";
 import { setupCheckoutForm } from "./modules/checkout";
+import { updateCartUI } from "./modules/cart";
 
 document.body.innerHTML = `
     <header>
@@ -38,3 +39,4 @@ document.body.innerHTML = `
 
 renderProductList(document.getElementById("products"));
 setupCheckoutForm();
+updateCartUI();

@@ -1,4 +1,6 @@
-const cart = [];
+import { saveCart, loadCart } from "./storage";
+
+const cart = loadCart();
 
 export function addToCart(product) {
   const existing = cart.find((item) => item.id === product.id);
@@ -7,16 +9,18 @@ export function addToCart(product) {
   } else {
     cart.push({ ...product, quantity: 1 });
   }
+  saveCart(cart);
   updateCartUI();
 }
 
 export function removeFromCart(productId) {
   const index = cart.findIndex((p) => p.id === productId);
   if (index !== -1) cart.splice(index, 1);
+  saveCart(cart);
   updateCartUI();
 }
 
-function updateCartUI() {
+export function updateCartUI() {
   const container = document.querySelector("#cart");
   container.innerHTML = "";
   let total = 0;
