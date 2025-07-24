@@ -17,7 +17,13 @@ document.body.innerHTML = `
             <h2>Cart</h2>
             <div id="cart"></div>
         </div>
-    </main>    
+    </main>
+    <div id="modal-overlay" class="hidden">
+        <div id="modal">
+            <button id="close-modal">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>    
 `;
 
 renderProductList(document.getElementById("products"));
