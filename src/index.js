@@ -1,5 +1,6 @@
 import "./styles.css";
 import { renderProductList } from "./modules/dom";
+import { setupCheckoutForm } from "./modules/checkout";
 
 document.body.innerHTML = `
     <header>
@@ -16,6 +17,15 @@ document.body.innerHTML = `
         <div id="cart-section">
             <h2>Cart</h2>
             <div id="cart"></div>
+            <h3>Checkout</h3>
+            <form id="checkout-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="card" placeholder="Card Number" maxlength="19" required>
+                <input type="text" id="exp" placeholder="MM/YY" maxlength="5" required>
+                <input type="text" id="cvv" placeholder="CVV" maxlength="4" required>
+                <button type="submit">Place Order</button>
+            </form>
         </div>
     </main>
     <div id="modal-overlay" class="hidden">
@@ -27,3 +37,4 @@ document.body.innerHTML = `
 `;
 
 renderProductList(document.getElementById("products"));
+setupCheckoutForm();
